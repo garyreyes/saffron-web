@@ -1,16 +1,21 @@
 "use client";
 
+import Image from "next/image";
 import { useState, type FormEvent } from "react";
-import { restaurant } from "@/lib/content";
+import { assets, restaurant } from "@/lib/content";
 import { Section } from "@/shared/components/Section";
-import { SubmitButton } from "@/shared/components/Button";
+import { LinkButton, SubmitButton } from "@/shared/components/Button";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 const inputClasses =
   "w-full bg-transparent border-b border-plum/25 py-2 focus:border-terracotta outline-none transition-colors placeholder:text-plum/40";
 
-export function ContactForm() {
+type ContactFormProps = {
+  hasEmblem: boolean;
+};
+
+export function ContactForm({ hasEmblem }: ContactFormProps) {
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -73,19 +78,51 @@ export function ContactForm() {
           )}
         </form>
 
-        <div className="text-sm space-y-4 self-start">
-          <p className="text-plum/70">
+        <div className="relative text-sm">
+          <h3 className="text-xs tracking-[0.2em] uppercase text-terracotta mb-4">Other Ways to Reach Us</h3>
+          <p className="text-plum/70 mb-4">
             Prefer to book by phone or message? Reach us on Facebook and we&apos;ll get back to you
             quickly.
           </p>
-          <a
-            href={restaurant.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-terracotta hover:underline"
-          >
-            Message us on Facebook →
-          </a>
+          <div className="space-y-2 mb-8">
+            <a
+              href={restaurant.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-terracotta hover:underline"
+            >
+              Message us on Facebook →
+            </a>
+            <a href={`mailto:${restaurant.email}`} className="block text-terracotta hover:underline">
+              {restaurant.email}
+            </a>
+          </div>
+
+          <h3 className="text-xs tracking-[0.2em] uppercase text-terracotta mb-4">Prefer Delivery?</h3>
+          <p className="text-plum/70 mb-4">Order Saffron for delivery or pickup through foodpanda.</p>
+          <LinkButton href={restaurant.foodpanda} target="_blank" rel="noopener noreferrer" variant="outline-dark">
+            Order on foodpanda
+          </LinkButton>
+
+          <h3 className="text-xs tracking-[0.2em] uppercase text-terracotta mb-4 mt-8">Hours</h3>
+          <ul className="space-y-1 text-plum/80">
+            {restaurant.hours.map((h) => (
+              <li key={h.days}>
+                {h.days}: {h.hours}
+              </li>
+            ))}
+          </ul>
+
+          {hasEmblem && (
+            <Image
+              src={assets.emblem}
+              alt=""
+              aria-hidden="true"
+              width={200}
+              height={168}
+              className="pointer-events-none select-none absolute -right-2 bottom-0 w-32 sm:w-40 h-auto opacity-[0.12] mix-blend-luminosity"
+            />
+          )}
         </div>
       </div>
     </Section>

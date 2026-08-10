@@ -47,6 +47,10 @@ export const restaurant = {
   addressShort: "1015 Asturias St, Sampaloc, Manila",
   mapsQuery: "Saffron Middle Eastern Restaurant, 1015 Asturias St, Sampaloc, Manila",
   facebook: "https://www.facebook.com/saffron102218/",
+  email: "saffron102218@gmail.com",
+  foodpanda: "https://www.foodpanda.ph/restaurant/s7tz/saffron-middle-eastern-restaurant-ust",
+  priceRange: "$$",
+  services: ["Dine-in", "In-store pickup"],
   rating: {
     score: "4.6",
     count: "121",

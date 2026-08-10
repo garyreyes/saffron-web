@@ -12,6 +12,7 @@ import { ContactForm } from "@/features/contact/ContactForm";
 export default function Home() {
   const hasLogo = publicImageExists(assets.logo);
   const hasHeroImage = publicImageExists(assets.hero);
+  const hasEmblem = publicImageExists(assets.emblem);
 
   return (
     <>
@@ -22,7 +23,7 @@ export default function Home() {
         <About />
         <Gallery />
         <HoursLocation />
-        <ContactForm />
+        <ContactForm hasEmblem={hasEmblem} />
       </main>
       <Footer />
     </>
