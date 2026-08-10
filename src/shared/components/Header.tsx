@@ -46,13 +46,28 @@ export function Header({ hasLogo }: HeaderProps) {
               {l.label}
             </a>
           ))}
+          <a
+            href={restaurant.foodpanda}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-saffron-bright text-plum-deep px-4 py-1.5 hover:bg-saffron transition-colors"
+          >
+            Order Delivery
+          </a>
         </nav>
-        <a
-          href="#contact"
-          className="md:hidden text-xs tracking-[0.2em] uppercase hover:text-saffron-bright"
-        >
-          Reserve
-        </a>
+        <div className="flex md:hidden items-center gap-5 text-xs tracking-[0.2em] uppercase">
+          <a
+            href={restaurant.foodpanda}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-saffron-bright hover:text-saffron transition-colors"
+          >
+            Delivery
+          </a>
+          <a href="#contact" className="hover:text-saffron-bright transition-colors">
+            Reserve
+          </a>
+        </div>
       </div>
     </header>
   );

@@ -7,8 +7,9 @@ to the current placeholder design until it's there.
 | File | Status | Used for | Notes |
 |---|---|---|---|
 | `logo.png` | ✅ in place | Header wordmark | Background keyed to transparent and trimmed from the original export. |
-| `emblem.png` | ✅ in place | Optional decorative flower mark (no wordmark) | Not wired into a component yet — available for a favicon or accent use. |
-| `hero.jpg` | Not yet provided | Homepage hero background | Wide/landscape photo, at least 1600px wide. A dark overlay is applied automatically for text contrast. |
+| `emblem.png` | ✅ in place | Faint decorative flower watermark in the Reservations section | |
+| `hero.jpg` | ❌ needed | Homepage hero background | The single highest-impact photo on the site — this is the first thing a visitor sees. Wide/landscape, at least 1600px wide. A dark overlay is applied automatically for text contrast. |
+| `about.jpg` | ❌ needed | About section photo (dining room / kitchen / chef) | Portrait-ish or square works best — see the section's aspect ratio. Falls back to a plain gradient block until provided. |
 | `menu/*.png` | ✅ 5 of 6 in place | Gallery section tiles | See `menu/README.md`. |
 
 Photos can be JPG or PNG — whichever matches the exact filename declared

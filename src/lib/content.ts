@@ -34,6 +34,8 @@ export const assets = {
   /** Standalone flower mark, no wordmark — optional, used decoratively. */
   emblem: "/images/emblem.png",
   hero: "/images/hero.jpg",
+  /** Dining room / kitchen / chef photo for the About section. */
+  about: "/images/about.jpg",
 };
 
 export const restaurant = {
