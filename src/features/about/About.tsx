@@ -3,7 +3,7 @@ import { Section } from "@/shared/components/Section";
 
 export function About() {
   return (
-    <Section id="about" eyebrowArabic="من نحن" eyebrowEnglish="About Us" title="Our Story" tone="charcoal">
+    <Section id="about" eyebrowArabic="من نحن" eyebrowEnglish="About Us" title="Our Story" tone="plum">
       <div className="grid sm:grid-cols-[1fr_1.2fr] gap-10 sm:gap-16 items-start">
         <div
           aria-hidden="true"

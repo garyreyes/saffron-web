@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { restaurant } from "@/lib/content";
+import { assets, restaurant } from "@/lib/content";
 
 const links = [
   { href: "#menu", label: "Menu" },
@@ -11,7 +12,11 @@ const links = [
   { href: "#contact", label: "Reserve" },
 ];
 
-export function Header() {
+type HeaderProps = {
+  hasLogo: boolean;
+};
+
+export function Header({ hasLogo }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -24,12 +29,16 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-charcoal-deep/95 backdrop-blur-sm" : "bg-transparent"
+        scrolled ? "bg-plum-deep/95 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between text-cream">
-        <a href="#top" className="font-display text-2xl tracking-wide">
-          {restaurant.name}
+        <a href="#top" className="flex items-center gap-2">
+          {hasLogo ? (
+            <Image src={assets.logo} alt={restaurant.fullName} width={36} height={36} className="h-9 w-auto" />
+          ) : (
+            <span className="font-display text-2xl tracking-wide">{restaurant.name}</span>
+          )}
         </a>
         <nav className="hidden md:flex items-center gap-8 text-xs tracking-[0.2em] uppercase">
           {links.map((l) => (

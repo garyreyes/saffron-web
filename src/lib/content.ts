@@ -20,6 +20,20 @@ export type GalleryTile = {
   dish: string;
   note: string;
   gradient: string;
+  /** Site-root-relative path where the real photo goes, once provided. */
+  image: string;
+};
+
+/**
+ * Fixed paths this site looks for under public/. Drop a file at the exact
+ * path and it's used automatically — no code changes needed. See
+ * public/images/README.md for the full list.
+ */
+export const assets = {
+  logo: "/images/logo.png",
+  /** Standalone flower mark, no wordmark — optional, used decoratively. */
+  emblem: "/images/emblem.png",
+  hero: "/images/hero.jpg",
 };
 
 export const restaurant = {
@@ -33,6 +47,10 @@ export const restaurant = {
   addressShort: "1015 Asturias St, Sampaloc, Manila",
   mapsQuery: "Saffron Middle Eastern Restaurant, 1015 Asturias St, Sampaloc, Manila",
   facebook: "https://www.facebook.com/saffron102218/",
+  email: "saffron102218@gmail.com",
+  foodpanda: "https://www.foodpanda.ph/restaurant/s7tz/saffron-middle-eastern-restaurant-ust",
+  priceRange: "$$",
+  services: ["Dine-in", "In-store pickup"],
   rating: {
     score: "4.6",
     count: "121",
@@ -105,12 +123,42 @@ export const menu: MenuCategory[] = [
 ];
 
 export const gallery: GalleryTile[] = [
-  { dish: "Kabsa", note: "Saffron rice, slow-roasted lamb", gradient: "from-[#B23A2E] to-[#7A2420]" },
-  { dish: "Chicken Shawarma", note: "Carved to order, garlic toum", gradient: "from-[#D4952B] to-[#9C6A1C]" },
-  { dish: "Mezze Spread", note: "Hummus, falafel, pickles", gradient: "from-[#7C8A5E] to-[#4E5A38]" },
-  { dish: "Sharooq Platter", note: "Saffron's signature mixed grill", gradient: "from-[#5C1A1A] to-[#2E0D0D]" },
-  { dish: "Thawm Macaroni", note: "House garlic sauce", gradient: "from-[#9C6A1C] to-[#D4952B]" },
-  { dish: "Fresh Pita & Toum", note: "Baked in-house, daily", gradient: "from-[#7A2420] to-[#B23A2E]" },
+  {
+    dish: "Chicken Kabsa",
+    note: "Saffron rice, slow-roasted chicken",
+    gradient: "from-[#C23428] to-[#7A2420]",
+    image: "/images/menu/chicken-kabsa.png",
+  },
+  {
+    dish: "Chicken Shawarma",
+    note: "Carved to order, garlic toum",
+    gradient: "from-[#D9A215] to-[#9C6A1C]",
+    image: "/images/menu/chicken-shawarma.png",
+  },
+  {
+    dish: "Chicken Warda",
+    note: "Crisp fried chicken, garlic dip, pita",
+    gradient: "from-[#A854A8] to-[#6B2F6B]",
+    image: "/images/menu/chicken-warda.png",
+  },
+  {
+    dish: "Beef Kofta Kebab",
+    note: "Grilled beef kofta over saffron rice",
+    gradient: "from-[#4A123F] to-[#2A0A23]",
+    image: "/images/menu/beef-kofta-kebab.png",
+  },
+  {
+    dish: "Baklava",
+    note: "Layered pastry, honey, nuts",
+    gradient: "from-[#9C6A1C] to-[#D9A215]",
+    image: "/images/menu/baklava.png",
+  },
+  {
+    dish: "Fresh Pita & Toum",
+    note: "Baked in-house, daily",
+    gradient: "from-[#7A2420] to-[#C23428]",
+    image: "/images/menu/fresh-pita-toum.jpg",
+  },
 ];
 
 export const testimonial = {

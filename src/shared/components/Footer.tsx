@@ -3,7 +3,7 @@ import { SaffronThread } from "@/shared/components/SaffronThread";
 
 export function Footer() {
   return (
-    <footer className="bg-charcoal-deep text-cream/70 px-6 py-14">
+    <footer className="bg-plum-deep text-cream/70 px-6 py-14">
       <div className="mx-auto max-w-5xl">
         <SaffronThread className="mb-8 max-w-xs" color="var(--saffron)" />
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">

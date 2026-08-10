@@ -9,16 +9,16 @@ type SectionProps = {
   eyebrowArabic: string;
   eyebrowEnglish: string;
   title: string;
-  tone?: "cream" | "charcoal";
+  tone?: "cream" | "plum";
   children: ReactNode;
 };
 
 export function Section({ id, eyebrowArabic, eyebrowEnglish, title, tone = "cream", children }: SectionProps) {
-  const isDark = tone === "charcoal";
+  const isDark = tone === "plum";
   return (
     <section
       id={id}
-      className={`px-6 py-20 sm:py-28 ${isDark ? "bg-charcoal text-cream" : "bg-cream text-charcoal"}`}
+      className={`px-6 py-20 sm:py-28 ${isDark ? "bg-plum text-cream" : "bg-cream text-plum"}`}
     >
       <div className="mx-auto max-w-5xl">
         <motion.div

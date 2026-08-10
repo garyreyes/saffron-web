@@ -27,6 +27,20 @@ export function HoursLocation() {
           <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="text-terracotta hover:underline">
             Get directions →
           </a>
+
+          <h3 className="text-xs tracking-[0.2em] uppercase text-terracotta mb-4 mt-8">Good to Know</h3>
+          <ul className="space-y-2 text-plum/80">
+            <li>
+              <span className="text-plum/50">Price range:</span> {restaurant.priceRange}
+            </li>
+            <li>
+              <span className="text-plum/50">Services:</span> {restaurant.services.join(" · ")}
+            </li>
+            <li>
+              <span className="text-plum/50">Rating:</span> {restaurant.rating.score}★ on{" "}
+              {restaurant.rating.source} ({restaurant.rating.count} reviews)
+            </li>
+          </ul>
         </div>
         <div className="aspect-[4/3] sm:aspect-auto sm:h-full min-h-64 overflow-hidden">
           <iframe

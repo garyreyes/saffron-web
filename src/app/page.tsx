@@ -1,3 +1,5 @@
+import { assets } from "@/lib/content";
+import { publicImageExists } from "@/lib/images";
 import { Header } from "@/shared/components/Header";
 import { Footer } from "@/shared/components/Footer";
 import { Hero } from "@/features/hero/Hero";
@@ -8,16 +10,20 @@ import { HoursLocation } from "@/features/hours-location/HoursLocation";
 import { ContactForm } from "@/features/contact/ContactForm";
 
 export default function Home() {
+  const hasLogo = publicImageExists(assets.logo);
+  const hasHeroImage = publicImageExists(assets.hero);
+  const hasEmblem = publicImageExists(assets.emblem);
+
   return (
     <>
-      <Header />
+      <Header hasLogo={hasLogo} />
       <main className="flex-1">
-        <Hero />
+        <Hero hasHeroImage={hasHeroImage} />
         <Menu />
         <About />
         <Gallery />
         <HoursLocation />
-        <ContactForm />
+        <ContactForm hasEmblem={hasEmblem} />
       </main>
       <Footer />
     </>
