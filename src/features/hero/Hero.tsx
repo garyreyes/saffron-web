@@ -1,25 +1,44 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { restaurant } from "@/lib/content";
+import { assets, restaurant } from "@/lib/content";
 import { LinkButton } from "@/shared/components/Button";
 import { SaffronThread } from "@/shared/components/SaffronThread";
 import { fadeUp, stagger } from "@/shared/lib/motion";
 
-export function Hero() {
+type HeroProps = {
+  hasHeroImage: boolean;
+};
+
+export function Hero({ hasHeroImage }: HeroProps) {
   return (
     <section
       id="top"
       className="relative min-h-screen flex items-center justify-center bg-charcoal text-cream px-6 overflow-hidden"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, var(--saffron) 0, var(--saffron) 1px, transparent 1px, transparent 22px), repeating-linear-gradient(-45deg, var(--saffron) 0, var(--saffron) 1px, transparent 1px, transparent 22px)",
-        }}
-      />
+      {hasHeroImage ? (
+        <>
+          <Image
+            src={assets.hero}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-charcoal/70" />
+        </>
+      ) : (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(45deg, var(--saffron) 0, var(--saffron) 1px, transparent 1px, transparent 22px), repeating-linear-gradient(-45deg, var(--saffron) 0, var(--saffron) 1px, transparent 1px, transparent 22px)",
+          }}
+        />
+      )}
       <motion.div
         variants={stagger}
         initial="hidden"
