@@ -1,30 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --charcoal: #211815;
-  --charcoal-deep: #170F0D;
-  --cream: #F7EFE1;
-  --cream-warm: #F0E4CE;
-  --saffron: #D4952B;
-  --saffron-bright: #E8AC42;
-  --terracotta: #B23A2E;
-  --burgundy: #5C1A1A;
-  --sage: #7C8A5E;
+  /* Sampled directly from Saffron's real logo/emblem assets (public/images/) */
+  --plum: #2F192E;
+  --plum-deep: #1B0E1A;
+  --cream: #F8F0F4;
+  --cream-warm: #EFDFE8;
+  --saffron: #D9A215;
+  --saffron-bright: #F5C518;
+  --terracotta: #C23428;
+  --burgundy: #4A123F;
+  --purple: #A854A8;
+  --purple-light: #D9BFD9;
+  --purple-deep: #7A3D7A;
 
   --background: var(--cream);
-  --foreground: var(--charcoal);
+  --foreground: var(--plum);
 }
 
 @theme inline {
-  --color-charcoal: var(--charcoal);
-  --color-charcoal-deep: var(--charcoal-deep);
+  --color-plum: var(--plum);
+  --color-plum-deep: var(--plum-deep);
   --color-cream: var(--cream);
   --color-cream-warm: var(--cream-warm);
   --color-saffron: var(--saffron);
   --color-saffron-bright: var(--saffron-bright);
   --color-terracotta: var(--terracotta);
   --color-burgundy: var(--burgundy);
-  --color-sage: var(--sage);
+  --color-purple: var(--purple);
+  --color-purple-light: var(--purple-light);
+  --color-purple-deep: var(--purple-deep);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-display: var(--font-amiri);

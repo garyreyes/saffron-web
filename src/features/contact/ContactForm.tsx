@@ -8,7 +8,7 @@ import { SubmitButton } from "@/shared/components/Button";
 type Status = "idle" | "sending" | "sent" | "error";
 
 const inputClasses =
-  "w-full bg-transparent border-b border-charcoal/25 py-2 focus:border-terracotta outline-none transition-colors placeholder:text-charcoal/40";
+  "w-full bg-transparent border-b border-plum/25 py-2 focus:border-terracotta outline-none transition-colors placeholder:text-plum/40";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -64,7 +64,7 @@ export function ContactForm() {
             {status === "sending" ? "Sending…" : "Request Reservation"}
           </SubmitButton>
           {status === "sent" && (
-            <p className="text-sm text-sage">Thanks — we&apos;ll confirm your table shortly.</p>
+            <p className="text-sm text-purple-deep">Thanks — we&apos;ll confirm your table shortly.</p>
           )}
           {status === "error" && (
             <p className="text-sm text-terracotta">
@@ -74,7 +74,7 @@ export function ContactForm() {
         </form>
 
         <div className="text-sm space-y-4 self-start">
-          <p className="text-charcoal/70">
+          <p className="text-plum/70">
             Prefer to book by phone or message? Reach us on Facebook and we&apos;ll get back to you
             quickly.
           </p>

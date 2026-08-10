@@ -11,7 +11,7 @@ export function Menu() {
 
   return (
     <Section id="menu" eyebrowArabic="القائمة" eyebrowEnglish="The Menu" title="From the Kitchen">
-      <div className="flex flex-wrap gap-x-6 gap-y-3 mb-10 border-b border-charcoal/15 pb-6">
+      <div className="flex flex-wrap gap-x-6 gap-y-3 mb-10 border-b border-plum/15 pb-6">
         {menu.map((category) => (
           <button
             key={category.id}
@@ -19,7 +19,7 @@ export function Menu() {
             className={`text-sm tracking-[0.15em] uppercase transition-colors pb-1 border-b-2 ${
               activeId === category.id
                 ? "text-terracotta border-terracotta"
-                : "text-charcoal/50 border-transparent hover:text-charcoal"
+                : "text-plum/50 border-transparent hover:text-plum"
             }`}
           >
             {category.name}
@@ -50,11 +50,11 @@ export function Menu() {
                     </>
                   )}
                 </div>
-                <p className="text-sm text-charcoal/60 mt-1">{item.description}</p>
+                <p className="text-sm text-plum/60 mt-1">{item.description}</p>
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-xs text-charcoal/50 tracking-wide">
+          <p className="mt-8 text-xs text-plum/50 tracking-wide">
             Prices available in-house — ask your server for today&apos;s rates.
           </p>
         </motion.div>

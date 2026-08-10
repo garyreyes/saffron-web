@@ -29,7 +29,7 @@ export function Header({ hasLogo }: HeaderProps) {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-charcoal-deep/95 backdrop-blur-sm" : "bg-transparent"
+        scrolled ? "bg-plum-deep/95 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between text-cream">

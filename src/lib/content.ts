@@ -122,37 +122,37 @@ export const gallery: GalleryTile[] = [
   {
     dish: "Chicken Kabsa",
     note: "Saffron rice, slow-roasted chicken",
-    gradient: "from-[#B23A2E] to-[#7A2420]",
+    gradient: "from-[#C23428] to-[#7A2420]",
     image: "/images/menu/chicken-kabsa.png",
   },
   {
     dish: "Chicken Shawarma",
     note: "Carved to order, garlic toum",
-    gradient: "from-[#D4952B] to-[#9C6A1C]",
+    gradient: "from-[#D9A215] to-[#9C6A1C]",
     image: "/images/menu/chicken-shawarma.png",
   },
   {
     dish: "Chicken Warda",
     note: "Crisp fried chicken, garlic dip, pita",
-    gradient: "from-[#7C8A5E] to-[#4E5A38]",
+    gradient: "from-[#A854A8] to-[#6B2F6B]",
     image: "/images/menu/chicken-warda.png",
   },
   {
     dish: "Beef Kofta Kebab",
     note: "Grilled beef kofta over saffron rice",
-    gradient: "from-[#5C1A1A] to-[#2E0D0D]",
+    gradient: "from-[#4A123F] to-[#2A0A23]",
     image: "/images/menu/beef-kofta-kebab.png",
   },
   {
     dish: "Baklava",
     note: "Layered pastry, honey, nuts",
-    gradient: "from-[#9C6A1C] to-[#D4952B]",
+    gradient: "from-[#9C6A1C] to-[#D9A215]",
     image: "/images/menu/baklava.png",
   },
   {
     dish: "Fresh Pita & Toum",
     note: "Baked in-house, daily",
-    gradient: "from-[#7A2420] to-[#B23A2E]",
+    gradient: "from-[#7A2420] to-[#C23428]",
     image: "/images/menu/fresh-pita-toum.jpg",
   },
 ];

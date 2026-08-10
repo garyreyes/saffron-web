@@ -15,7 +15,7 @@ export function Hero({ hasHeroImage }: HeroProps) {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center justify-center bg-charcoal text-cream px-6 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-plum text-cream px-6 overflow-hidden"
     >
       {hasHeroImage ? (
         <>
@@ -27,7 +27,7 @@ export function Hero({ hasHeroImage }: HeroProps) {
             sizes="100vw"
             className="object-cover"
           />
-          <div aria-hidden="true" className="absolute inset-0 bg-charcoal/70" />
+          <div aria-hidden="true" className="absolute inset-0 bg-plum/70" />
         </>
       ) : (
         <div
