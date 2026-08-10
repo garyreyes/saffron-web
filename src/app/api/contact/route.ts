@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { resend } from "@/lib/resend";
+import { getResend } from "@/lib/resend";
 
 const MAX_LENGTHS = { name: 100, phone: 30, partySize: 10, date: 40, message: 1000 } as const;
 
@@ -33,14 +33,14 @@ export async function POST(request: Request) {
   }
 
   const inbox = process.env.RESTAURANT_INBOX_EMAIL;
-  if (!inbox) {
+  if (!inbox || !process.env.RESEND_API_KEY) {
     return NextResponse.json(
-      { error: "Reservation inbox is not configured." },
+      { error: "Reservation email is not configured." },
       { status: 500 }
     );
   }
 
-  const { error } = await resend.emails.send({
+  const { error } = await getResend().emails.send({
     from: "Saffron Reservations <onboarding@resend.dev>",
     to: inbox,
     subject: `Reservation request from ${name}`,
