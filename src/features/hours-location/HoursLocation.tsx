@@ -1,5 +1,6 @@
 import { restaurant } from "@/lib/content";
 import { Section } from "@/shared/components/Section";
+import { LinkButton } from "@/shared/components/Button";
 
 export function HoursLocation() {
   const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -41,8 +42,17 @@ export function HoursLocation() {
               {restaurant.rating.source} ({restaurant.rating.count} reviews)
             </li>
           </ul>
+          <LinkButton
+            href={restaurant.googleReviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="outline-dark"
+            className="mt-6"
+          >
+            Leave a Review
+          </LinkButton>
         </div>
-        <div className="aspect-[4/3] sm:aspect-auto sm:h-full min-h-64 overflow-hidden">
+        <div className="aspect-[4/3] sm:aspect-auto sm:h-full min-h-96 sm:min-h-[32rem] overflow-hidden">
           <iframe
             title="Map to Saffron Middle Eastern Restaurant"
             src={mapsEmbedSrc}

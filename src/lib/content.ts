@@ -49,6 +49,7 @@ export const restaurant = {
   addressShort: "1015 Asturias St, Sampaloc, Manila",
   mapsQuery: "Saffron Middle Eastern Restaurant, 1015 Asturias St, Sampaloc, Manila",
   facebook: "https://www.facebook.com/saffron102218/",
+  googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJ8XcLyum3lzMRgfQWk8Yx6C4",
   email: "saffron102218@gmail.com",
   foodpanda: "https://www.foodpanda.ph/restaurant/s7tz/saffron-middle-eastern-restaurant-ust",
   priceRange: "$$",
@@ -154,12 +155,6 @@ export const gallery: GalleryTile[] = [
     note: "Layered pastry, honey, nuts",
     gradient: "from-[#9C6A1C] to-[#D9A215]",
     image: "/images/menu/baklava.png",
-  },
-  {
-    dish: "Fresh Pita & Toum",
-    note: "Baked in-house, daily",
-    gradient: "from-[#7A2420] to-[#C23428]",
-    image: "/images/menu/fresh-pita-toum.jpg",
   },
 ];
 
