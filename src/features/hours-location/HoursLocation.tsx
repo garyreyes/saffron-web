@@ -18,7 +18,7 @@ export function HoursLocation() {
       title="Visit Us"
       tone="plum"
     >
-      <div className="grid sm:grid-cols-2 gap-10">
+      <div className="grid sm:grid-cols-2 gap-10 sm:items-center">
         <div>
           <h3 className="text-xs tracking-[0.2em] uppercase text-saffron-bright mb-4">Hours</h3>
           <ul className="space-y-2 mb-8">
@@ -63,7 +63,7 @@ export function HoursLocation() {
             Leave a Review
           </LinkButton>
         </div>
-        <div className="aspect-[4/3] sm:aspect-auto sm:h-full min-h-96 sm:min-h-[32rem] overflow-hidden border border-cream/10">
+        <div className="aspect-[4/3] sm:aspect-auto h-96 sm:h-[32rem] overflow-hidden border border-cream/10">
           <iframe
             title="Map to Saffron Middle Eastern Restaurant"
             src={mapsEmbedSrc}
