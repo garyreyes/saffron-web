@@ -11,10 +11,16 @@ export function HoursLocation() {
   )}&output=embed`;
 
   return (
-    <Section id="hours" eyebrowArabic="الساعات والموقع" eyebrowEnglish="Hours & Location" title="Visit Us">
+    <Section
+      id="hours"
+      eyebrowArabic="الساعات والموقع"
+      eyebrowEnglish="Hours & Location"
+      title="Visit Us"
+      tone="plum"
+    >
       <div className="grid sm:grid-cols-2 gap-10">
         <div>
-          <h3 className="text-xs tracking-[0.2em] uppercase text-terracotta mb-4">Hours</h3>
+          <h3 className="text-xs tracking-[0.2em] uppercase text-saffron-bright mb-4">Hours</h3>
           <ul className="space-y-2 mb-8">
             {restaurant.hours.map((h) => (
               <li key={h.days} className="flex items-baseline justify-between max-w-xs">
@@ -23,22 +29,27 @@ export function HoursLocation() {
               </li>
             ))}
           </ul>
-          <h3 className="text-xs tracking-[0.2em] uppercase text-terracotta mb-4">Location</h3>
+          <h3 className="text-xs tracking-[0.2em] uppercase text-saffron-bright mb-4">Location</h3>
           <p className="mb-2">{restaurant.address}</p>
-          <a href={mapsHref} target="_blank" rel="noopener noreferrer" className="text-terracotta hover:underline">
+          <a
+            href={mapsHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-saffron-bright hover:underline"
+          >
             Get directions →
           </a>
 
-          <h3 className="text-xs tracking-[0.2em] uppercase text-terracotta mb-4 mt-8">Good to Know</h3>
-          <ul className="space-y-2 text-plum/80">
+          <h3 className="text-xs tracking-[0.2em] uppercase text-saffron-bright mb-4 mt-8">Good to Know</h3>
+          <ul className="space-y-2 text-cream/80">
             <li>
-              <span className="text-plum/50">Price range:</span> {restaurant.priceRange}
+              <span className="text-cream/50">Price range:</span> {restaurant.priceRange}
             </li>
             <li>
-              <span className="text-plum/50">Services:</span> {restaurant.services.join(" · ")}
+              <span className="text-cream/50">Services:</span> {restaurant.services.join(" · ")}
             </li>
             <li>
-              <span className="text-plum/50">Rating:</span> {restaurant.rating.score}★ on{" "}
+              <span className="text-cream/50">Rating:</span> {restaurant.rating.score}★ on{" "}
               {restaurant.rating.source} ({restaurant.rating.count} reviews)
             </li>
           </ul>
@@ -46,13 +57,13 @@ export function HoursLocation() {
             href={restaurant.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            variant="outline-dark"
+            variant="outline"
             className="mt-6"
           >
             Leave a Review
           </LinkButton>
         </div>
-        <div className="aspect-[4/3] sm:aspect-auto sm:h-full min-h-96 sm:min-h-[32rem] overflow-hidden">
+        <div className="aspect-[4/3] sm:aspect-auto sm:h-full min-h-96 sm:min-h-[32rem] overflow-hidden border border-cream/10">
           <iframe
             title="Map to Saffron Middle Eastern Restaurant"
             src={mapsEmbedSrc}
